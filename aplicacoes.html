@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aplicações Inovadoras - Evolução das Inteligências Artificiais</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #4675a3;
+      color: #1c1c1c;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #0a1425;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 110px;
+      position: relative;
+    }
+    .logo {
+      height: 120px;
+      object-fit: contain;
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .header-text {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 700px;
+    }
+    .header-text h1 {
+      margin-bottom: 0.3rem;
+      font-size: 1.8rem;
+    }
+    .header-slogan {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      color: #00bcd4;
+      letter-spacing: 0.05em;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1c2336;
+      padding: 1rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00bcd4;
+    }
+    main {
+      flex: 1;
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 2.5rem 3rem;
+      background: linear-gradient(135deg, #e6f0fa, #ffffff);
+      border-radius: 16px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+      color: #1c1c1c;
+      line-height: 1.7;
+      font-size: 1.125rem;
+      font-weight: 400;
+    }
+    main img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    main img:hover {
+      transform: scale(1.03);
+    }
+    main h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      color: #0a1425;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    main h3 {
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: #27496d;
+      font-weight: 600;
+      border-left: 4px solid #00bcd4;
+      padding-left: 0.75rem;
+    }
+    main p {
+      margin-bottom: 1.3rem;
+      white-space: pre-line;
+    }
+    main ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #2e4a74;
+    }
+    main ul li {
+      margin-bottom: 0.8rem;
+      line-height: 1.5;
+    }
+    footer {
+      background-color: #0a1425;
+      color: white;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1 1 250px;
+    }
+    .logo-footer {
+      width: 120px;
+      height: auto;
+    }
+    .footer-vertical-text {
+      font-size: 1rem;
+      color: #00bcd4;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    .footer-social,
+    .footer-contact {
+      flex: 1 1 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .footer-social .social-title,
+    .footer-contact .social-title {
+      font-weight: bold;
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+    .footer-social .social-separator,
+    .footer-contact .social-separator {
+      border: 1px solid #00bcd4;
+      margin: 0;
+      width: 100%;
+    }
+    .social {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .social a img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .social a:hover img {
+      transform: scale(1.2);
+      filter: brightness(1.4);
+    }
+    .footer-contact p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    .footer-bottom {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+    @media (max-width: 768px) {
+      main {
+        margin: 1.5rem 1rem;
+        padding: 1.5rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 12px;
+      }
+      main h2 {
+        font-size: 1.9rem;
+      }
+      main h3 {
+        font-size: 1.4rem;
+      }
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-vertical-text {
+        text-align: center;
+      }
+      .social {
+        justify-content: center;
+      }
+      .footer-social,
+      .footer-contact {
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo IA" class="logo" />
+    <div class="header-text">
+      <h1>Aplicações Inovadoras</h1>
+      <p class="header-slogan">Descubra, aprenda e evolua com a tecnologia</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="noticias.html">Notícias</a>
+    <a href="aplicacoes.html" aria-current="page">Aplicações</a>
+    <a href="politica-privacidade.html">Política de Privacidade</a>
+  </nav>
+
+  <main>
+    <img src="aplicações.jpeg" alt="Aplicações inovadoras de IA" />
+
+    <h2>Aplicações Inovadoras da Inteligência Artificial</h2>
+
+    <p>
+      A inteligência artificial tem transformado diversos setores, trazendo soluções inovadoras que impactam nosso cotidiano, economia e a forma como interagimos com a tecnologia.
+    </p>
+
+    <h3>Saúde</h3>
+    <p>
+      A IA está revolucionando a medicina com diagnósticos mais precisos, análise de imagens médicas, desenvolvimento de medicamentos e cuidados personalizados ao paciente.
+      Sistemas de IA auxiliam na detecção precoce de doenças, como câncer e problemas cardíacos, aumentando as chances de tratamento eficaz.
+    </p>
+
+    <h3>Indústria e Automação</h3>
+    <p>
+      Na indústria, robôs inteligentes e sistemas automatizados otimizam processos produtivos, monitoram a qualidade e garantem maior segurança no ambiente de trabalho.
+      A manutenção preditiva, baseada em IA, previne falhas em equipamentos, reduzindo custos e paradas não planejadas.
+    </p>
+
+    <h3>Transporte e Mobilidade</h3>
+    <p>
+      Veículos autônomos, sistemas inteligentes de tráfego e logística eficiente são exemplos de como a IA está moldando o futuro da mobilidade urbana.
+      Aplicações em drones para entregas rápidas e monitoramento ambiental também são destaque.
+    </p>
+
+    <h3>Educação</h3>
+    <p>
+      Plataformas educacionais com IA personalizam o aprendizado, adaptando conteúdos e ritmo às necessidades de cada aluno.
+      Chatbots e assistentes virtuais fornecem suporte contínuo e interação em tempo real, melhorando a experiência educacional.
+    </p>
+
+    <h3>Entretenimento e Criação de Conteúdo</h3>
+    <p>
+      IA é usada na geração de músicas, artes digitais, roteiros e até em jogos, criando experiências personalizadas e inovadoras para usuários.
+      Algoritmos de recomendação tornam plataformas de streaming e redes sociais mais intuitivas.
+    </p>
+
+    <h3>Meio Ambiente</h3>
+    <p>
+      Soluções baseadas em IA monitoram o meio ambiente, auxiliando no combate ao desmatamento, previsão climática e preservação da biodiversidade.
+      Sensores inteligentes e análise de dados contribuem para ações mais eficazes na sustentabilidade.
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <img src="logo.png" alt="Logo IA" class="logo-footer" />
+      <div class="footer-vertical-text">
+        Descubra, aprenda e evolua com a tecnologia.
+      </div>
+    </div>
+
+     <div class="footer-social">
+      <p class="social-title">Nossas Redes:</p>
+      <hr class="social-separator">
+      <div class="social">
+        <a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" width="35"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"  width="40"></a>
+        <a href="https://www.tiktok.com" target="_blank"><img src="tiktok.png" alt="TikTok"  width="43"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"  width="35"></a>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <p class="social-title">Contato:</p>
+      <hr class="social-separator" />
+      <p>Telefone: (11) 99999-9999</p>
+      <p>Email: contato@evolucaoia.com.br</p>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Evolução das Inteligências Artificiais - Todos os direitos reservados.
+    </div>
+  </footer>
+</body>
+</html>
