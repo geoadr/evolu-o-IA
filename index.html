@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Evolução das Inteligências Artificiais</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -17,23 +21,44 @@
     }
 
     header {
-  background-color: #0a1425;
-  color: white;
-  padding: 0 2rem;   
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100px;     
-  overflow: hidden; 
-}
+      background-color: #0a1425;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 110px;
+      position: relative;
+    }
 
-.logo {
-  height: 110px; 
-  object-fit: contain;
-}
+    .logo {
+      height: 120px;
+      object-fit: contain;
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
+    .header-text {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    .header-text h1 {
+      margin-bottom: 0.3rem;
+      font-size: 1.8rem;
+    }
+
+    .header-slogan {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      color: #00bcd4;
+      letter-spacing: 0.05em;
+    }
 
     nav {
       display: flex;
@@ -153,13 +178,50 @@
       color: white;
       padding: 2rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex: 1;
     }
 
     .logo-footer {
-      height: 80px;
+      height: 100px;
+    }
+
+    .footer-vertical-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #00bcd4;
+      font-style: italic;
+    }
+
+    .social-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .social-title {
+      font-weight: bold;
+      color: white;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    .social-separator {
+      width: 100%;
+      border: 1px solid #00bcd4;
+      margin: 0;
     }
 
     .social a {
@@ -192,7 +254,17 @@
       footer {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .footer-left {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-vertical-text {
+        align-items: center;
       }
     }
   </style>
@@ -200,14 +272,17 @@
 <body>
   <header>
     <img src="logo.png" alt="Logo IA" class="logo">
-    <h1>Evolução das Inteligências Artificiais</h1>
+    <div class="header-text">
+      <h1>Evolução das Inteligências Artificiais</h1>
+      <p class="header-slogan">CyberMundo – Descubra, aprenda e evolua com a tecnologia</p>
+    </div>
   </header>
 
   <nav>
     <a href="index.html">Início</a>
-    <a href="historia.html">História</a>
-    <a href="aplicacoes.html">Aplicações</a>
-    <a href="futuro.html">Futuro</a>
+    <a href="noticias.html">Notícias</a>
+    <a href="tecnologia.html">Tecnologia</a>
+    <a href="politica-privacidade.html">Política de Privacidade</a>
   </nav>
 
   <main>
@@ -250,12 +325,28 @@
   </main>
 
   <footer>
-    <img src="logo.png" alt="Logo IA" class="logo-footer">
-    <div class="social">
-      <a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" width="35"></a>
-      <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"  width="40"></a>
-      <a href="https://www.tiktok.com" target="_blank"><img src="tiktok.png" alt="TikTok"  width="42"></a>
-      <a href="https://www.youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"  width="35"></a>
+    <div class="footer-left">
+      <img src="logo.png" alt="Logo IA" class="logo-footer">
+      <div class="footer-vertical-text">
+        <span>Conectando</span>
+        <span>você</span>
+        <span>ao</span>
+        <span>futuro</span>
+        <span>da</span>
+        <span>inteligência</span>
+        <span>artificial</span>
+      </div>
+    </div>
+
+    <div class="social-container">
+      <p class="social-title">Nossas Redes:</p>
+      <hr class="social-separator">
+      <div class="social">
+        <a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" width="35"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"  width="40"></a>
+        <a href="https://www.tiktok.com" target="_blank"><img src="tiktok.png" alt="TikTok"  width="42"></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"  width="35"></a>
+      </div>
     </div>
   </footer>
 </body>
