@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Evolução das Inteligências Artificiais</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #3f8ca3;
-      color: #333;
+      background-color: #4675a3;
+      color: #1c1c1c;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
     header {
-      background-color: #0a1425;
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+  background-color: #0a1425;
+  color: white;
+  padding: 0 2rem;   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100px;     
+  overflow: hidden; 
+}
 
-    .logo {
-      height: 180px;
-    }
+.logo {
+  height: 110px; 
+  object-fit: contain;
+}
+
+
 
     nav {
       display: flex;
       justify-content: center;
       background-color: #1c2336;
-      padding: 0.5rem;
+      padding: 1rem;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
-      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -57,23 +58,100 @@
     main {
       flex: 1;
       padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      background: #1c2336;
+      color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 2rem;
     }
 
-    .content img {
-      margin-top: 1rem;
+    .hero-text {
+      flex: 1 1 300px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+
+    .hero img {
+      flex: 1 1 300px;
       width: 100%;
-      border-radius: 8px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .noticias h2 {
+      font-size: 1.8rem;
+      color: #0a1425;
+      margin-bottom: 1rem;
+    }
+
+    .grid-noticias {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content a {
+      text-decoration: none;
+      color: #1c2336;
+      font-weight: bold;
+    }
+
+    .card-content a:hover {
+      color: #00bcd4;
     }
 
     footer {
       background-color: #0a1425;
       color: white;
-      padding: 1rem;
+      padding: 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -81,16 +159,15 @@
     }
 
     .logo-footer {
-      height: 100px;
+      height: 80px;
     }
 
     .social a {
       margin: 0 0.5rem;
       display: inline-block;
-      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    .social a img {
+    .social img {
       transition: transform 0.3s ease, filter 0.3s ease;
     }
 
@@ -98,11 +175,32 @@
       transform: scale(1.2);
       filter: brightness(1.4);
     }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
+
+      .hero-text, .hero img {
+        padding: 1rem;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
     <img src="logo.png" alt="Logo IA" class="logo">
+    <h1>Evolução das Inteligências Artificiais</h1>
   </header>
 
   <nav>
@@ -113,19 +211,51 @@
   </nav>
 
   <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>A Inteligência Artificial está moldando o futuro</h1>
+        <p>Conheça a história, as aplicações e o impacto da IA em nossas vidas e no mundo moderno.</p>
+      </div>
+      <img src="evoluçãoia.jpeg" alt="IA destaque">
+    </section>
+
+    <section class="noticias">
+      <h2>Últimas Notícias</h2>
+      <div class="grid-noticias">
+        <article class="card">
+          <img src="primordias.jpeg" alt="História da IA">
+          <div class="card-content">
+            <h3><a href="historia.html">Dos Primórdios ao Presente</a></h3>
+            <p>Entenda como a IA evoluiu desde Alan Turing até os algoritmos modernos.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="aplicações.jpeg" alt="Aplicações da IA">
+          <div class="card-content">
+            <h3><a href="aplicacoes.html">Aplicações Inovadoras</a></h3>
+            <p>Veja como a IA está transformando áreas como saúde, mobilidade e entretenimento.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="futuro.jpeg" alt="Futuro da IA">
+          <div class="card-content">
+            <h3><a href="futuro.html">O que esperar do futuro</a></h3>
+            <p>As tendências e preocupações sobre ética, explicabilidade e IA geral.</p>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer>
     <img src="logo.png" alt="Logo IA" class="logo-footer">
     <div class="social">
-      <a href="https://www.facebook.com" target="_blank">
-        <img src="facebook.png" alt="Facebook" width="35"></a>
-      <a href="https://www.instagram.com" target="_blank">
-        <img src="instagram.png" alt="Instagram" width="40"></a>
-      <a href="https://www.tiktok.com" target="_blank">
-        <img src="tiktok.png" alt="TikTok" width="40"></a>
-      <a href="https://www.youtube.com" target="_blank">
-        <img src="youtube.png" alt="YouTube" width="35"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" width="35"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram"  width="40"></a>
+      <a href="https://www.tiktok.com" target="_blank"><img src="tiktok.png" alt="TikTok"  width="42"></a>
+      <a href="https://www.youtube.com" target="_blank"><img src="youtube.png" alt="YouTube"  width="35"></a>
     </div>
   </footer>
 </body>
