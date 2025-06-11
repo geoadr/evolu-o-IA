@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O Futuro da IA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #4675a3;
+      color: #1c1c1c;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0a1425;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 110px;
+      position: relative;
+    }
+
+    .logo {
+      height: 120px;
+      object-fit: contain;
+      position: absolute;
+      left: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-text {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 700px;
+    }
+
+    .header-text h1 {
+      margin-bottom: 0.3rem;
+      font-size: 1.8rem;
+    }
+
+    .header-slogan {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      color: #00bcd4;
+      letter-spacing: 0.05em;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1c2336;
+      padding: 1rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: #1c1c1c;
+    }
+
+    main img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #0a1425;
+    }
+
+    main p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      white-space: pre-line;
+    }
+
+    ul {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+
+    footer {
+      background-color: #0a1425;
+      color: white;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1 1 250px;
+    }
+
+    .logo-footer {
+      width: 120px;
+      height: auto;
+    }
+
+    .footer-vertical-text {
+      font-size: 1rem;
+      color: #00bcd4;
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .footer-social,
+    .footer-contact {
+      flex: 1 1 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .footer-social .social-title {
+      font-weight: bold;
+      color: white;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .footer-social .social-separator,
+    .footer-contact .social-separator {
+      border: 1px solid #00bcd4;
+      margin: 0;
+      width: 100%;
+    }
+
+    .social {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .social a img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social a:hover img {
+      transform: scale(1.2);
+      filter: brightness(1.4);
+    }
+
+    .footer-contact p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .footer-bottom {
+      width: 100%;
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        max-width: 100%;
+        border-radius: 0;
+        padding: 1rem;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-vertical-text {
+        text-align: center;
+      }
+
+      .social {
+        justify-content: center;
+      }
+
+      .footer-social,
+      .footer-contact {
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo IA" class="logo" />
+    <div class="header-text">
+      <h1>O Futuro da IA</h1>
+      <p class="header-slogan">Descubra, aprenda e evolua com a tecnologia</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="noticias.html">Notícias</a>
+    <a href="aplicacoes.html">Aplicações</a>
+    <a href="futuro.html" aria-current="page">Futuro</a>
+    <a href="politica-privacidade.html">Política de Privacidade</a>
+  </nav>
+
+  <main>
+    <img src="futuro.jpeg" alt="Futuro da inteligência artificial" />
+
+    <h2>O Futuro da IA</h2>
+
+    <p>
+      O futuro da IA é incerto, mas há um consenso de que a IA continuará a desempenhar um papel
+      cada vez maior em nossas vidas. Algumas das tendências mais promissoras na pesquisa em
+      IA incluem:
+    </p>
+
+    <ul>
+      <li><strong>IA explicável:</strong> Tornar os modelos de IA mais transparentes e compreensíveis para que os humanos possam entender como eles tomam decisões.</li>
+      <li><strong>IA robusta:</strong> Desenvolver modelos de IA que sejam mais resistentes a ruídos e ataques adversários.</li>
+      <li><strong>IA ética:</strong> Garantir que a IA seja usada de forma ética e responsável, evitando preconceitos e discriminação.</li>
+      <li><strong>IA geral:</strong> Continuar a busca pela IA geral, a capacidade de uma máquina realizar qualquer tarefa intelectual que um ser humano pode.</li>
+    </ul>
+
+    <p>
+      A IA tem o potencial de transformar a sociedade de maneiras profundas. No entanto, é
+      importante abordar o desenvolvimento da IA com cautela e responsabilidade, garantindo que
+      ela seja usada para o bem da humanidade.
+    </p>
+  </main>
+
+  <footer>
+    <div class="footer-left">
+      <img src="logo.png" alt="Logo IA" class="logo-footer" />
+      <div class="footer-vertical-text">
+        Descubra, aprenda e evolua com a tecnologia.
+      </div>
+    </div>
+
+    <div class="footer-social">
+      <p class="social-title">Nossas Redes:</p>
+      <hr class="social-separator" />
+      <div class="social">
+        <a href="https://www.facebook.com" target="_blank"><img src="facebook.png" alt="Facebook" width="35" /></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="instagram.png" alt="Instagram" width="40" /></a>
+        <a href="https://www.tiktok.com" target="_blank"><img src="tiktok.png" alt="TikTok" width="43" /></a>
+        <a href="https://www.youtube.com" target="_blank"><img src="youtube.png" alt="YouTube" width="35" /></a>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <p><strong>Contato:</strong></p>
+      <hr class="social-separator" />
+      <p>Email: contato@cybermundo.com</p>
+      <p>Telefone: (11) 98765-4321</p>
+    </div>
+
+    <p class="footer-bottom">© 2025 CyberMundo. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
